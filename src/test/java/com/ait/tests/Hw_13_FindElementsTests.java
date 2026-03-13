@@ -37,6 +37,7 @@ public class Hw_13_FindElementsTests {
         WebElement footer = driver.findElement(By.className("footer"));
         System.out.println(footer.isDisplayed());
     }
+
     @AfterMethod(enabled = false)
     public void tearDown(){
         driver.quit();
