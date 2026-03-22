@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Hw_13_FindElementsTests {
+public class Hw_15_FindElementsTests {
 
     WebDriver driver;
 
@@ -17,25 +17,6 @@ public class Hw_13_FindElementsTests {
         driver = new ChromeDriver();
         driver.get("https://demowebshop.tricentis.com");
         driver.manage().window().maximize();
-    }
-
-    @Test
-    public void hw_13_findElementByidTest(){
-        driver.findElement(By.id("dialog-notifications-success"));
-
-
-
-    }
-    @Test
-    public void hw_13_findElementByTegName(){
-        WebElement body = driver.findElement(By.tagName("body"));
-        System.out.println(body.isDisplayed());
-
-    }
-    @Test
-    public void hw_13_findElementByClassName(){
-        WebElement footer = driver.findElement(By.className("footer"));
-        System.out.println(footer.isDisplayed());
     }
     @Test
     public void hw_15_findElementByText(){
@@ -53,9 +34,9 @@ public class Hw_13_FindElementsTests {
         WebElement partialLinkText = driver.findElement(By.partialLinkText("Notice"));
         System.out.println(partialLinkText.getText());
     }
-
     @AfterMethod(enabled = false)
     public void tearDown(){
         driver.quit();
     }
+
 }
